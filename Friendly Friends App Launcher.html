@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Friendly Friends App - A social platform for sharing videos, blogs, messages, and creative content with AI-powered features">
+    <meta name="keywords" content="social media, video sharing, blog, messaging, AI chat, creative platform">
+    <meta name="author" content="Friendly Friends App">
+    <title>Friendly Friends App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .cta-buttons {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .links {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .tech-stack {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .tech-stack h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .tech-tag {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #667eea;
+            border: 1px solid #667eea;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">FF</div>
+        <h1>Friendly Friends App</h1>
+        <p class="subtitle">Connect, Share, Create, and Explore Together</p>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🎥</div>
+                <h3>Video Sharing</h3>
+                <p>Upload and share videos with the community</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📝</div>
+                <h3>Blog Creation</h3>
+                <p>Create and publish blog posts with images</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Messaging</h3>
+                <p>Real-time messaging with file attachments</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <h3>AI Features</h3>
+                <p>AI chat, document creation, and more</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Creative Tools</h3>
+                <p>Paint, draw, and express your creativity</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📞</div>
+                <h3>Video Calls</h3>
+                <p>Connect with friends via video calls</p>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h3>Built With</h3>
+            <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">OpenAI</span>
+                <span class="tech-tag">WebRTC</span>
+                <span class="tech-tag">Vite</span>
+            </div>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="#" onclick="redirectToApp('/'); return false;" class="btn btn-primary">Get Started</a>
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO" class="btn btn-secondary" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="links">
+            <a href="#" onclick="redirectToApp('/'); return false;">Login</a>
+            <a href="#" onclick="showInfo('Documentation coming soon!'); return false;">Documentation</a>
+            <a href="#" onclick="showInfo('Friendly Friends App - Connect, Share, Create!'); return false;">About</a>
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to redirect to the React app
+        function redirectToApp(path = '/') {
+            // Check if we're already on a React app route
+            if (window.location.pathname.startsWith('/videos') || 
+                window.location.pathname.startsWith('/blog') ||
+                window.location.pathname.startsWith('/messages') ||
+                window.location.pathname.startsWith('/paint') ||
+                window.location.pathname.startsWith('/todos') ||
+                window.location.pathname.startsWith('/ai-chat') ||
+                window.location.pathname.startsWith('/admin') ||
+                window.location.pathname.startsWith('/docs')) {
+                // Already in the app, just navigate
+                window.location.href = path;
+                return;
+            }
+
+            // Determine the React app URL
+            const currentOrigin = window.location.origin;
+            const currentPath = window.location.pathname;
+            const protocol = window.location.protocol;
+            
+            // If opened as file://, redirect to localhost
+            if (protocol === 'file:') {
+                // Redirect to Vite dev server
+                window.location.href = 'http://localhost:5173' + path;
+                return;
+            }
+            
+            // If this HTML file is being served directly (file:// or from root)
+            if (currentPath.endsWith('index.html') || currentPath === '/' || currentPath === '') {
+                // Check if we're in development (localhost)
+                if (currentOrigin.includes('localhost') || currentOrigin.includes('127.0.0.1')) {
+                    // Try to redirect to Vite dev server (port 5173)
+                    window.location.href = 'http://localhost:5173' + path;
+                } else {
+                    // Production - React app should be served from same origin
+                    // Backend serves frontend from /dist, so just navigate to root
+                    window.location.href = path;
+                }
+            } else {
+                // Already on a server, just navigate
+                window.location.href = path;
+            }
+        }
+
+        // Auto-redirect functionality
+        let redirectTimer;
+        let countdown = 5;
+        let countdownElement;
+        
+        function startAutoRedirect() {
+            // Create countdown element
+            countdownElement = document.createElement('div');
+            countdownElement.style.cssText = 'margin-top: 20px; color: #666; font-size: 0.9em;';
+            countdownElement.id = 'countdown';
+            const container = document.querySelector('.container');
+            if (container) {
+                container.appendChild(countdownElement);
+            }
+            
+            const updateCountdown = () => {
+                if (countdown > 0 && countdownElement) {
+                    countdownElement.textContent = `Redirecting to app in ${countdown} seconds... (click anywhere to cancel)`;
+                    countdown--;
+                    redirectTimer = setTimeout(updateCountdown, 1000);
+                } else if (countdown === 0) {
+                    redirectToApp('/');
+                }
+            };
+            
+            redirectTimer = setTimeout(updateCountdown, 0);
+        }
+
+        // Cancel auto-redirect if user interacts with the page
+        document.addEventListener('click', function() {
+            if (redirectTimer) {
+                clearTimeout(redirectTimer);
+            }
+            countdown = 0;
+            if (countdownElement) {
+                countdownElement.textContent = '';
+            }
+        });
+
+        // Show info message
+        function showInfo(message) {
+            alert(message);
+        }
+
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate features on scroll (if needed)
+            const features = document.querySelectorAll('.feature');
+            features.forEach((feature, index) => {
+                feature.style.animationDelay = `${index * 0.1}s`;
+            });
+
+            // Make feature cards clickable - redirect to app
+            features.forEach(feature => {
+                feature.style.cursor = 'pointer';
+                feature.addEventListener('click', function() {
+                    redirectToApp('/');
+                });
+            });
+            
+            // Start auto-redirect after DOM is loaded
+            startAutoRedirect();
+        });
+    </script>
+</body>
+</html>
+
